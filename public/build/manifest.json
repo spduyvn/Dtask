@@ -1,0 +1,49 @@
+{
+  "resources/css/app.css": {
+    "file": "assets/app-l0sNRNKZ.js",
+    "name": "app",
+    "src": "resources/css/app.css",
+    "isEntry": true
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-CIPtKxIq.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true,
+    "css": [
+      "assets/app-cAc5xPyE.css"
+    ],
+    "assets": [
+      "assets/dtask-CBohrUKW.png",
+      "assets/task-ChB-cUcV.png",
+      "assets/project-DKGRi6uc.png",
+      "assets/note-Z6Kbt88e.png",
+      "assets/edit-BP9__xSy.png",
+      "assets/delete-D50KiUhj.png"
+    ]
+  },
+  "resources/js/assets/images/icons/delete.png": {
+    "file": "assets/delete-D50KiUhj.png",
+    "src": "resources/js/assets/images/icons/delete.png"
+  },
+  "resources/js/assets/images/icons/dtask.png": {
+    "file": "assets/dtask-CBohrUKW.png",
+    "src": "resources/js/assets/images/icons/dtask.png"
+  },
+  "resources/js/assets/images/icons/edit.png": {
+    "file": "assets/edit-BP9__xSy.png",
+    "src": "resources/js/assets/images/icons/edit.png"
+  },
+  "resources/js/assets/images/icons/note.png": {
+    "file": "assets/note-Z6Kbt88e.png",
+    "src": "resources/js/assets/images/icons/note.png"
+  },
+  "resources/js/assets/images/icons/project.png": {
+    "file": "assets/project-DKGRi6uc.png",
+    "src": "resources/js/assets/images/icons/project.png"
+  },
+  "resources/js/assets/images/icons/task.png": {
+    "file": "assets/task-ChB-cUcV.png",
+    "src": "resources/js/assets/images/icons/task.png"
+  }
+}
