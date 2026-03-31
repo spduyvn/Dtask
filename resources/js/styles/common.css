@@ -1,0 +1,936 @@
+/* Base mobile-friendly */
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (max-width: 768px) {
+  button:not(.btn-icon),
+  .btn-primary,
+  .btn-secondary,
+  .btn-danger,
+  a.nav-item {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  a.nav-item {
+    min-width: auto;
+  }
+}
+
+/* Shared badge styles used across multiple screens */
+.badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.badge--red {
+  background: rgba(239, 68, 68, 0.25);
+  color: #382918;
+}
+
+.badge--gray {
+  background: rgba(100, 116, 139, 0.25);
+  color: #64748b;
+}
+
+.badge--green {
+  background: rgba(34, 197, 94, 0.22);
+  color: #587c64;
+}
+
+.badge--orange {
+  background: rgba(249, 115, 22, 0.25);
+  color: #382918;
+}
+
+.badge--blue {
+  background: rgba(59, 130, 246, 0.25);
+  color: #3b82f6;
+}
+
+/* =========================
+   TASK_PROJECT_TOOLBAR_CSS
+========================= */
+
+.user-task-list .toolbar,
+.user-project-list .toolbar {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.user-task-list .toolbar-filters,
+.user-project-list .toolbar-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+/* =========================
+   TASK_PROJECT_TABLE_CSS
+========================= */
+
+.user-task-list .table-wrap,
+.user-project-list .table-wrap,
+.user-note-list .table-wrap,
+.flash-card-list .table-wrap,
+.flash-card-groups .table-wrap {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.user-task-list .table,
+.user-project-list .table,
+.user-note-list .table,
+.flash-card-list .table,
+.flash-card-groups .table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.user-task-list .table th,
+.user-task-list .table td,
+.user-project-list .table th,
+.user-project-list .table td,
+.user-note-list .table th,
+.user-note-list .table td,
+.flash-card-list .table th,
+.flash-card-list .table td,
+.flash-card-groups .table th,
+.flash-card-groups .table td {
+  padding: 14px 18px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.user-task-list .table th,
+.user-project-list .table th,
+.user-note-list .table th,
+.flash-card-list .table th,
+.flash-card-groups .table th {
+  background: #f9fafb;
+  color: #6b7280;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.user-task-list .table td,
+.user-project-list .table td,
+.user-note-list .table td,
+.flash-card-list .table td,
+.flash-card-groups .table td {
+  color: #111827;
+  font-size: 14px;
+}
+
+.user-task-list .loading-cell,
+.user-task-list .empty-cell,
+.user-project-list .loading-cell,
+.user-project-list .empty-cell,
+.user-note-list .loading-cell,
+.user-note-list .empty-cell,
+.flash-card-list .loading-cell,
+.flash-card-list .empty-cell,
+.flash-card-groups .loading-cell,
+.flash-card-groups .empty-cell {
+  text-align: center;
+  color: #64748b;
+  padding: 40px;
+}
+
+/* =========================
+   TASK_PROJECT_STATUS_CSS
+========================= */
+
+.user-task-list .task-row--red,
+.user-project-list .task-row--red {
+  background: rgba(239, 68, 68, 0.12);
+  border-left: 4px solid #ef4444;
+}
+
+.user-task-list .task-row--gray,
+.user-project-list .task-row--gray {
+  background: rgba(100, 116, 139, 0.15);
+  border-left: 4px solid #64748b;
+}
+
+.user-task-list .task-row--green,
+.user-project-list .task-row--green {
+  background: rgba(34, 197, 94, 0.12);
+  border-left: 4px solid #22c55e;
+}
+
+.user-task-list .task-row--orange,
+.user-project-list .task-row--orange {
+  background: rgba(249, 115, 22, 0.1);
+  border-left: 4px solid #f97316;
+}
+
+.user-task-list .task-row--blue,
+.user-project-list .task-row--blue {
+  background: rgba(59, 130, 246, 0.1);
+  border-left: 4px solid #3b82f6;
+}
+
+.user-task-list .task-title,
+.user-project-list .task-title {
+  font-weight: 600;
+}
+
+.user-task-list .task-desc,
+.user-project-list .task-desc {
+  max-width: 240px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.user-task-list .status-actions,
+.user-project-list .status-actions {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.user-task-list .btn-icon,
+.user-project-list .btn-icon {
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #f9fafb;
+  color: #4b5563;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.user-task-list .btn-icon:hover,
+.user-project-list .btn-icon:hover {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+.user-task-list .btn-icon--active,
+.user-project-list .btn-icon--active {
+  background: rgba(233, 69, 96, 0.2);
+  color: #e94560;
+  border-color: rgba(233, 69, 96, 0.4);
+}
+
+.user-task-list .btn-icon-symbol,
+.user-project-list .btn-icon-symbol {
+  font-size: 14px;
+  line-height: 1;
+}
+
+/* =========================
+   TASK_PROJECT_BUTTON_CSS
+========================= */
+
+.user-task-list .btn-primary,
+.user-project-list .btn-primary,
+.user-task-calendar .btn-primary {
+  padding: 10px 20px;
+  background: #e94560;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.user-task-list .btn-primary:hover:not(:disabled),
+.user-project-list .btn-primary:hover:not(:disabled),
+.user-task-calendar .btn-primary:hover:not(:disabled) {
+  background: #d63d56;
+}
+
+.user-task-list .btn-primary:disabled,
+.user-project-list .btn-primary:disabled,
+.user-task-calendar .btn-primary:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.user-task-list .btn-secondary,
+.user-project-list .btn-secondary,
+.user-task-calendar .btn-secondary {
+  padding: 10px 18px;
+  background: #f3f4f6;
+  color: #374151;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.user-task-list .btn-secondary:hover,
+.user-project-list .btn-secondary:hover,
+.user-task-calendar .btn-secondary:hover {
+  background: #e5e7eb;
+}
+
+.user-task-list .btn-danger,
+.user-project-list .btn-danger,
+.user-task-calendar .btn-danger {
+  padding: 10px 18px;
+  background: rgba(239, 68, 68, 0.12);
+  color: #b91c1c;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.user-task-list .btn-danger:hover,
+.user-project-list .btn-danger:hover,
+.user-task-calendar .btn-danger:hover {
+  background: rgba(239, 68, 68, 0.2);
+}
+
+.user-task-list .btn-danger:disabled,
+.user-project-list .btn-danger:disabled,
+.user-task-calendar .btn-danger:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.user-task-list .btn-sm,
+.user-project-list .btn-sm {
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  margin-right: 8px;
+  border: none;
+  transition: opacity 0.2s;
+}
+
+.user-task-list .btn-edit,
+.user-project-list .btn-edit {
+  background: rgba(59, 130, 246, 0.2);
+  color: #60a5fa;
+}
+
+.user-task-list .btn-delete,
+.user-project-list .btn-delete {
+  background: rgba(239, 68, 68, 0.2);
+  color: #f87171;
+}
+
+/* =========================
+   LIGHT_PAGINATION_CSS
+========================= */
+
+.user-task-list .pagination,
+.user-project-list .pagination,
+.user-note-list .pagination,
+.flash-card-list .pagination,
+.flash-card-groups .pagination {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.user-task-list .pagination button,
+.user-project-list .pagination button,
+.user-note-list .pagination button,
+.flash-card-list .pagination button,
+.flash-card-groups .pagination button {
+  padding: 8px 16px;
+  background: #ffffff;
+  color: #111827;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.user-task-list .pagination button:hover:not(:disabled),
+.user-project-list .pagination button:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.user-note-list .pagination button:hover:not(:disabled),
+.flash-card-list .pagination button:hover:not(:disabled),
+.flash-card-groups .pagination button:hover:not(:disabled) {
+  background: #f3f4f6;
+}
+
+.user-task-list .pagination button:disabled,
+.user-project-list .pagination button:disabled,
+.user-note-list .pagination button:disabled,
+.flash-card-list .pagination button:disabled,
+.flash-card-groups .pagination button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* =========================
+   TASK_PROJECT_MODAL_FORM_CSS
+========================= */
+
+.user-task-list .modal-overlay,
+.user-project-list .modal-overlay,
+.user-task-calendar .modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.user-task-list .modal,
+.user-project-list .modal,
+.user-task-calendar .modal {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 28px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+}
+
+.user-task-list .modal-sm,
+.user-project-list .modal-sm,
+.user-task-calendar .modal-sm {
+  max-width: 400px;
+}
+
+.user-task-list .modal-title,
+.user-project-list .modal-title,
+.user-task-calendar .modal-title {
+  margin: 0 0 20px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.user-task-list .modal-text,
+.user-project-list .modal-text,
+.user-task-calendar .modal-text {
+  margin: 0 0 24px;
+  color: #6b7280;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.user-task-list .form,
+.user-project-list .form,
+.user-task-calendar .form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.user-task-list .form-error,
+.user-project-list .form-error,
+.user-task-calendar .form-error {
+  padding: 10px 14px;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.25);
+  border-radius: 8px;
+  color: #b91c1c;
+  font-size: 13px;
+}
+
+.user-task-list .field label,
+.user-project-list .field label,
+.user-task-calendar .field label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #374151;
+}
+
+.user-task-list .field input,
+.user-task-list .field textarea,
+.user-project-list .field input,
+.user-project-list .field textarea,
+.user-task-calendar .field input,
+.user-task-calendar .field textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #111827;
+  font-size: 14px;
+}
+
+.user-task-list .field textarea,
+.user-project-list .field textarea,
+.user-task-calendar .field textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.user-task-list .field input:focus,
+.user-task-list .field textarea:focus,
+.user-task-list .field select:focus,
+.user-project-list .field input:focus,
+.user-project-list .field textarea:focus,
+.user-project-list .field select:focus,
+.user-task-calendar .field input:focus,
+.user-task-calendar .field textarea:focus,
+.user-task-calendar .field select:focus {
+  outline: none;
+  border-color: #e94560;
+  box-shadow: 0 0 0 2px rgba(233, 69, 96, 0.2);
+}
+
+.user-task-list .field-select,
+.user-project-list .field-select,
+.user-task-calendar .field-select {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #111827;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.user-task-list .modal-actions,
+.user-project-list .modal-actions,
+.user-task-calendar .modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+/* =========================
+   NOTE_FLASH_TOOLBAR_CSS
+========================= */
+
+.user-note-list .toolbar,
+.flash-card-list .toolbar,
+.flash-card-groups .toolbar {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.user-note-list .toolbar-search,
+.flash-card-list .toolbar-search,
+.flash-card-groups .toolbar-search {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.user-note-list .search-input,
+.flash-card-list .search-input,
+.flash-card-groups .search-input {
+  padding: 8px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 14px;
+  min-width: 200px;
+}
+
+/* =========================
+   NOTE_FLASH_BUTTON_CSS
+========================= */
+
+.user-note-list .btn-primary,
+.flash-card-list .btn-primary,
+.flash-card-groups .btn-primary {
+  padding: 10px 20px;
+  background: #e94560;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.user-note-list .btn-primary:hover:not(:disabled),
+.flash-card-list .btn-primary:hover:not(:disabled),
+.flash-card-groups .btn-primary:hover:not(:disabled) {
+  background: #d63d56;
+}
+
+.user-note-list .btn-primary:disabled,
+.flash-card-list .btn-primary:disabled,
+.flash-card-groups .btn-primary:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.user-note-list .btn-sm,
+.flash-card-list .btn-sm,
+.flash-card-groups .btn-sm {
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  margin-right: 8px;
+  border: none;
+  transition: opacity 0.2s;
+}
+
+.user-note-list .btn-edit,
+.flash-card-list .btn-edit,
+.flash-card-groups .btn-edit {
+  background: rgba(59, 130, 246, 0.2);
+  color: #1d4ed8;
+}
+
+.user-note-list .btn-delete,
+.flash-card-list .btn-delete,
+.flash-card-groups .btn-delete {
+  background: rgba(239, 68, 68, 0.2);
+  color: #b91c1c;
+}
+
+.user-note-list .btn-secondary,
+.flash-card-list .btn-secondary,
+.flash-card-groups .btn-secondary {
+  padding: 10px 18px;
+  background: #f3f4f6;
+  color: #111827;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.user-note-list .btn-danger,
+.flash-card-list .btn-danger,
+.flash-card-groups .btn-danger {
+  padding: 10px 18px;
+  background: rgba(239, 68, 68, 0.15);
+  color: #b91c1c;
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.user-note-list .btn-danger:disabled,
+.flash-card-list .btn-danger:disabled,
+.flash-card-groups .btn-danger:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* =========================
+   NOTE_FLASH_MODAL_FORM_CSS
+========================= */
+
+.user-note-list .modal-overlay,
+.flash-card-list .modal-overlay,
+.flash-card-groups .modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.user-note-list .modal,
+.flash-card-list .modal,
+.flash-card-groups .modal {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 28px;
+  width: 100%;
+  max-width: 420px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.user-note-list .modal.modal--wide,
+.flash-card-list .modal.modal--wide,
+.flash-card-groups .modal.modal--wide {
+  max-width: 560px;
+}
+
+.user-note-list .modal-sm,
+.flash-card-list .modal-sm,
+.flash-card-groups .modal-sm {
+  max-width: 400px;
+}
+
+.user-note-list .modal-title,
+.flash-card-list .modal-title,
+.flash-card-groups .modal-title {
+  margin: 0 0 20px;
+  font-size: 18px;
+  color: #111827;
+}
+
+.user-note-list .modal-text,
+.flash-card-list .modal-text,
+.flash-card-groups .modal-text {
+  margin: 0 0 24px;
+  color: #4b5563;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.user-note-list .form,
+.flash-card-list .form,
+.flash-card-groups .form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.user-note-list .form-error,
+.flash-card-list .form-error,
+.flash-card-groups .form-error {
+  padding: 10px 14px;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: 8px;
+  color: #b91c1c;
+  font-size: 13px;
+}
+
+.user-note-list .field label,
+.flash-card-list .field label,
+.flash-card-groups .field label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #374151;
+}
+
+.user-note-list .field input,
+.user-note-list .field textarea,
+.flash-card-list .field input,
+.flash-card-list .field textarea,
+.flash-card-groups .field input,
+.flash-card-groups .field textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #111827;
+  font-size: 14px;
+}
+
+.user-note-list .field textarea,
+.flash-card-list .field textarea,
+.flash-card-groups .field textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.user-note-list .field input:focus,
+.user-note-list .field textarea:focus,
+.flash-card-list .field input:focus,
+.flash-card-list .field textarea:focus,
+.flash-card-groups .field input:focus,
+.flash-card-groups .field textarea:focus {
+  outline: none;
+  border-color: #e94560;
+}
+
+.user-note-list .modal-actions,
+.flash-card-list .modal-actions,
+.flash-card-groups .modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+/* =========================
+   FLASH_CARD_MEDIA_CSS
+========================= */
+
+.flash-card-list .image-preview-container,
+.flash-card-study .image-preview-container {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  max-width: 100%;
+}
+
+.flash-card-list .image-preview,
+.flash-card-study .image-preview {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+/* =========================
+   NOTE_FLASH_LINK_CARD_CSS
+========================= */
+
+.user-note-list .note-link,
+.flash-card-list .card-link,
+.flash-card-groups .group-link {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.user-note-list .note-link:hover,
+.flash-card-list .card-link:hover,
+.flash-card-groups .group-link:hover {
+  color: #e94560;
+}
+
+.user-note-list .list-cards,
+.flash-card-list .list-cards,
+.flash-card-groups .list-cards {
+  display: none;
+}
+
+.user-note-list .list-cards-loading,
+.user-note-list .list-cards-empty,
+.flash-card-list .list-cards-loading,
+.flash-card-list .list-cards-empty,
+.flash-card-groups .list-cards-loading,
+.flash-card-groups .list-cards-empty {
+  text-align: center;
+  padding: 24px;
+  color: #6b7280;
+}
+
+.user-note-list .list-card-head,
+.flash-card-list .list-card-head,
+.flash-card-groups .list-card-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.user-note-list .list-card-title,
+.flash-card-list .list-card-title,
+.flash-card-groups .list-card-title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.user-note-list .list-card-meta,
+.flash-card-list .list-card-meta,
+.flash-card-groups .list-card-meta {
+  margin: 0 0 10px;
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.user-note-list .list-card-actions,
+.flash-card-list .list-card-actions,
+.flash-card-groups .list-card-actions {
+  display: flex;
+  gap: 8px;
+  padding-top: 10px;
+  border-top: 1px solid #f3f4f6;
+}
+
+.user-note-list .btn-card-action,
+.flash-card-list .btn-card-action,
+.flash-card-groups .btn-card-action {
+  padding: 6px 12px;
+  font-size: 13px;
+  background: #f3f4f6;
+  color: #374151;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.user-note-list .btn-card-action--danger,
+.flash-card-list .btn-card-action--danger,
+.flash-card-groups .btn-card-action--danger {
+  background: rgba(239, 68, 68, 0.08);
+  color: #b91c1c;
+  border-color: rgba(239, 68, 68, 0.2);
+}
+
+/* =========================
+   NOTE_FLASH_RESPONSIVE_CSS
+========================= */
+
+@media (max-width: 768px) {
+  .user-note-list .list-desktop,
+  .flash-card-list .list-desktop,
+  .flash-card-groups .list-desktop {
+    display: none !important;
+  }
+
+  .user-note-list .list-cards.list-mobile,
+  .flash-card-list .list-cards.list-mobile,
+  .flash-card-groups .list-cards.list-mobile {
+    display: block;
+  }
+
+  .user-note-list .modal-overlay,
+  .flash-card-list .modal-overlay,
+  .flash-card-groups .modal-overlay {
+    padding: 12px;
+  }
+
+  .user-note-list .modal,
+  .user-note-list .modal.modal--wide,
+  .flash-card-list .modal,
+  .flash-card-list .modal.modal--wide,
+  .flash-card-groups .modal,
+  .flash-card-groups .modal.modal--wide {
+    max-width: calc(100vw - 24px);
+    padding: 20px;
+  }
+
+  .user-note-list .modal-actions .btn-secondary,
+  .user-note-list .modal-actions .btn-primary,
+  .flash-card-list .modal-actions .btn-secondary,
+  .flash-card-list .modal-actions .btn-primary,
+  .flash-card-groups .modal-actions .btn-secondary,
+  .flash-card-groups .modal-actions .btn-primary {
+    min-height: 44px;
+  }
+}
+

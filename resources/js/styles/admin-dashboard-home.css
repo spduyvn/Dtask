@@ -1,0 +1,49 @@
+.dashboard-home {
+  max-width: 1000px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.card-value {
+  font-size: 28px;
+  font-weight: 700;
+  color: #e94560;
+  margin-bottom: 4px;
+}
+
+.card-label {
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+.welcome-block {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 32px;
+}
+
+.welcome-block h2 {
+  margin: 0 0 8px;
+  font-size: 20px;
+  color: #111827;
+}
+
+.welcome-block p {
+  margin: 0;
+  color: #4b5563;
+  font-size: 15px;
+}
+

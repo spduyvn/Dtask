@@ -1,0 +1,18 @@
+/* Extra styles for register page (shared layout uses login-page.css) */
+.form-footer {
+  margin: 0;
+  margin-top: 8px;
+  text-align: center;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.form-footer .link {
+  color: #e94560;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.form-footer .link:hover {
+  text-decoration: underline;
+}

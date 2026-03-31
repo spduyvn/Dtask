@@ -1,0 +1,151 @@
+/* Flash card list - same design system as user-note-list */
+.flash-card-list {
+  max-width: 100%;
+}
+
+.flash-card-list .toolbar-actions {
+  display: flex;
+  gap: 10px;
+  margin-left: auto;
+}
+
+.flash-card-list .btn-study {
+  padding: 10px 20px;
+  background: #22c55e;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.flash-card-list .btn-study:hover {
+  background: #16a34a;
+}
+
+.flash-card-list .btn-back {
+  padding: 10px 20px;
+  background: #f3f4f6;
+  color: #111827;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.flash-card-list .btn-back:hover {
+  background: #e5e7eb;
+}
+
+.flash-card-list .question-cell {
+  max-width: 320px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+.flash-card-list .level-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  background: rgba(99, 102, 241, 0.1);
+  color: #6366f1;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.flash-card-list .field-textarea--large {
+  min-height: 140px;
+}
+
+.flash-card-list .list-card--flashcard {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+}
+
+.flash-card-list .file-input {
+  width: 100%;
+  padding: 8px 12px;
+  background: #ffffff;
+  border: 1px dashed #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #6b7280;
+  cursor: pointer;
+}
+
+[data-theme="dark"] .flash-card-list .file-input {
+  background: #374151;
+  border-color: #4b5563;
+  color: #9ca3af;
+}
+
+.flash-card-list .btn-remove-image {
+  margin: 0;
+  padding: 4px 10px;
+  font-size: 12px;
+  background: rgba(239, 68, 68, 0.1);
+  color: #b91c1c;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+[data-theme="dark"] .flash-card-list .btn-remove-image {
+  background: rgba(239, 68, 68, 0.2);
+  border-color: #4b5563;
+  color: #fca5a5;
+}
+
+.drop-zone {
+  border: 2px dashed #d1d5db;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+  background: #f9fafb;
+  position: relative;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.drop-zone.is-dragging {
+  border-color: #e94560;
+  background: rgba(233, 69, 96, 0.05);
+}
+
+.drop-hint {
+  color: #6b7280;
+  font-size: 0.875rem;
+  margin-bottom: 12px;
+}
+
+.file-input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+[data-theme="dark"] .drop-zone {
+  border-color: #374151;
+  background: #1f2937;
+}
+
+[data-theme="dark"] .drop-hint {
+  color: #9ca3af;
+}
+
